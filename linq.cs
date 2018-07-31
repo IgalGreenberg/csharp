@@ -6,11 +6,9 @@ using System.Linq;
 namespace Chapter1 {
     public class Program {
         static void Main () {
-            IEnumerable<int> numbers = Enumerable.Range (0, 10);
+            IEnumerable<int> numbers = Enumerable.Range (0, 1000);
             var evens = from num in numbers where num % 2 == 0 select num;
-            foreach (var e in evens){
-                Console.WriteLine(e);
-            } 
+            Console.WriteLine(evens.Sum());
         }
     }
 }
